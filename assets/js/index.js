@@ -21,3 +21,17 @@ while(triesCounter < MAX_TRIES){
 /*
 2. Найти факториал числа 
 */
+function factorial(num){
+  if ( num < 0) return null; 
+
+  let factCounter = 1;
+  let countedFactorial = BigInt(1);
+  
+  while (factCounter < num){
+    factCounter++;
+    countedFactorial *= BigInt(factCounter);
+  }
+  return countedFactorial;
+}
+const factNumber = +prompt("Enter number: ");
+console.log(factorial(factNumber));
