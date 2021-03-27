@@ -26,7 +26,7 @@ function factorial(num){
 
   let factCounter = 1;
   let countedFactorial = BigInt(1);
-  
+
   while (factCounter < num){
     factCounter++;
     countedFactorial *= BigInt(factCounter);
@@ -35,3 +35,22 @@ function factorial(num){
 }
 const factNumber = +prompt("Enter number: ");
 console.log(factorial(factNumber));
+
+/* 3. Возвести число в заданную степень (power) с помощью цикла */
+
+function getPower(num, power){
+  if(power === 0){
+    return 1;
+  }
+  if(power < 0){
+    return 1 / getPower(num, -power);
+  }
+
+  let result = num;
+  let powerCounter = 1;
+  while(powerCounter < power){
+    result *= num;
+    powerCounter++;
+  }
+  return result;
+}
